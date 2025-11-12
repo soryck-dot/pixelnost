@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pixel Nostalgia</title>
+
+  <!-- Fontes do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url('fundo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-family: 'Roboto', sans-serif;
+      color: white;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .titulo {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 52px;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .subtitulo {
+      font-family: 'VT323', monospace;
+      font-size: 32px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .introducao {
+      font-size: 16px;
+      line-height: 1.8;
+      text-align: center;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .lista-jogos {
+      list-style-type: disc;
+      text-align: left;
+      margin: 20px auto;
+      padding-left: 40px;
+      max-width: 700px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 200px;
+      height: 300px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .flip-card-front {
+      background-color: #fff;
+    }
+
+    .flip-card-back {
+      background-color: #fff;
+      transform: rotateY(180deg);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 900px) {
+      .flip-card {
+        width: 45%;
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .flip-card {
+        width: 100%;
+        height: 200px;
+      }
+    }
+
+    .despedida {
+      font-family: 'VT323', monospace;
+      font-size: 22px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer {
+      font-size: 14px;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="titulo">Pixel Nostalgia</h1>
+  <h2 class="subtitulo">Reviva os clássicos que marcaram gerações!</h2>
+
+  <section class="introducao">
+    <p>Antes da era dos gráficos ultra-realistas e mundos abertos infinitos, existia um tempo em que a diversão cabia em cartuchos coloridos e telas de tubo. Os jogos antigos não precisavam de muito para conquistar corações: bastavam alguns pixels, uma trilha sonora marcante e aquele desafio que fazia a gente repetir a fase até decorar cada obstáculo.</p>
+    <p>No Brasil, títulos como Top Gear, Super Mario Bros, Sonic e Street Fighter II não eram apenas jogos — eram parte da infância, das tardes em locadoras e das disputas entre amigos no sofá. Essa página é um convite para reviver esses momentos, redescobrir curiosidades e celebrar o legado dos clássicos que moldaram gerações.</p>
+  </section>
+
+  <h2 class="subtitulo">Jogos Clássicos de Consoles e Fliperamas Mais Populares no Brasil (Anos 80 e 90)</h2>
+
+  <section class="introducao">
+    <p>Entre os jogos que dominaram os consoles domésticos e locadoras, os mais populares no Brasil foram os seguintes:</p>
+    <ul class="lista-jogos">
+      <li><strong>Top Gear (SNES)</strong> – Ícone absoluto no Brasil, especialmente pela trilha sonora.</li>
+      <li><strong>Super Mario Bros (NES)</strong> – Popularizado com o Nintendinho, presença obrigatória nas casas brasileiras.</li>
+      <li><strong>Sonic the Hedgehog (Mega Drive)</strong> – Forte presença nos anos 90, especialmente entre fãs da Sega.</li>
+      <li><strong>Street Fighter II (Arcades/SNES)</strong> – Febre nos fliperamas e disputas em locadoras.</li>
+    </ul>
+    <p>Muitos desses jogos se tornaram populares mesmo sem tradução oficial, graças à criatividade dos fãs e à cultura das locadoras. O Brasil teve forte influência de consoles como Super Nintendo e Mega Drive, que chegaram por meio de importadoras e clones.</p>
+    <p><strong>Clique nos cards abaixo e confira algumas curiosidades interessantes sobre cada jogo:</strong></p>
+  </section>
+
+  <div class="cards-container">
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="topgear.frente.png" alt="Top Gear Frente">
+        </div>
+        <div class="flip-card-back">
+          <img src="topgear.verso.png" alt="Top Gear Verso">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="supermario.frente.png" alt="Mario Frente">
+        </div>
+        <div class="flip-card-back">
+          <img src="supermario.verso.png" alt="Mario Verso">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="sonic.frente.png" alt="Sonic Frente">
+        </div>
+        <div class="flip-card-back">
+          <img src="sonic.verso.png" alt="Sonic Verso">
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card" onclick="this.classList.toggle('flipped')">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="streetfighter.frente.png" alt="Street Fighter Frente">
+        </div>
+        <div class="flip-card-back">
+          <img src="streetfighter.verso.png" alt="Street Fighter Verso">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="introducao">
+    <p>Os clássicos dos anos 80 e 90 não foram apenas marcos da história dos videogames — eles se tornaram parte da memória afetiva de toda uma geração. Mesmo com limitações técnicas, esses jogos conquistaram o coração dos brasileiros com carisma, desafio e criatividade. Celebrar esse legado é reconhecer como a cultura gamer se formou no país, impulsionada por locadoras, importadoras e pela paixão dos fãs. Que essa nostalgia continue inspirando novas descobertas e revivendo momentos inesquecíveis.</p>
+  </section>
+
+  <!-- Frase de despedida estilizada -->
+<p style="
+  font-family: 'VT323', monospace;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  margin-top: 40px;
+">
+  Obrigado por embarcar nessa viagem no tempo. Que os pixels do passado continuem iluminando sua paixão pelo universo dos games!
+</p>
+
+<style>
+body {
+  background-image: url('https://copilot.microsoft.com/th/id/BCO.400668fc-e8b3-4f29-a863-6c778ba0efa7.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+</style>
+ 
+<!-- Rodapé -->
+<footer style="
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+">
+  Criado por Soraya 2025
+</footer>
